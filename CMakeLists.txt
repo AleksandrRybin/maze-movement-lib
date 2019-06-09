@@ -1,22 +1,20 @@
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.10)
 
 project(maze-movement-lib)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-find_package(GTest REQUIRED)
 
 find_package(Boost 1.68.0 REQUIRED COMPONENTS program_options)
 
 include_directories(inc ${Boost_INCLUDE_DIRS})
 
-add_library(maze-movement SHARED src/maze_movement.cpp)
+add_library(maze_movement SHARED src/maze_movement.cpp src/point.cpp)
 
 add_executable(demo src/demo.cpp)
 
-target_link_libraries(demo maze-movement Boost::program_options)
+target_link_libraries(demo maze_movement ${Boost_LIBRARIES})
 
 add_executable(lib_test test/maze_movement_lib_test.cpp)
 
