@@ -78,6 +78,12 @@ IntegerMaze2D::IntegerMaze2D(const std::string& path) {
     in_file.close();
 }
 
+IntegerMaze2D::IntegerMaze2D(const std::list<IntegerPoint2D>& points) {
+    for (const auto& point : points) {
+        _maze.insert(point);
+    }
+}
+
 std::size_t IntegerMaze2D::size() const {
     return _maze.size();
 }

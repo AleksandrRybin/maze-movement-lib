@@ -73,6 +73,12 @@ public:
     IntegerMaze2D(const std::string& path);
 
     /*!
+        * @brief Создание лабиринта из списка точек
+        * @param points список точек
+     */
+    IntegerMaze2D(const std::list<IntegerPoint2D>& points);
+
+    /*!
         * @brief Размер лабиринта
      */
     std::size_t size() const;
