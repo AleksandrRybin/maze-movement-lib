@@ -93,7 +93,7 @@ bool IntegerMaze2D::is_empty() const {
 }
 
 bool IntegerMaze2D::have_point(const IntegerPoint2D& point) const {
-    return _maze.find(point) == _maze.end();
+    return _maze.find(point) != _maze.end();
 }
 
 bool IntegerMaze2D::have_neighbour(const IntegerPoint2D& point, const MOVEMENT& movement) const {
