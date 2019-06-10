@@ -88,6 +88,10 @@ std::size_t IntegerMaze2D::size() const {
     return _maze.size();
 }
 
+bool IntegerMaze2D::is_empty() const {
+    return size() == 0;
+}
+
 bool IntegerMaze2D::have_neighbour(const IntegerPoint2D& point, const MOVEMENT& movement) const {
     // если в результате движения
     // координаты не поменялись

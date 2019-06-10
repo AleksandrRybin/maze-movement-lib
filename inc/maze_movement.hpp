@@ -84,6 +84,10 @@ public:
     std::size_t size() const;
     
     /*!
+        * @brief Проверка на пустоту лабиринта
+     */
+    bool is_empty() const;
+    /*!
         * @brief Имеет ли точка смежную.
         * @param point точка для проверки.
         * @param movement направление для поиска.
