@@ -87,6 +87,14 @@ public:
         * @brief Проверка на пустоту лабиринта
      */
     bool is_empty() const;
+
+    /*!
+        * @brief Есть ли данная точка в лабиринте.
+        * @param point точка для проверки.
+        * @return true если точка есть, иначе false.
+     */
+    bool have_point(const IntegerPoint2D& point) const;
+    
     /*!
         * @brief Имеет ли точка смежную.
         * @param point точка для проверки.
