@@ -16,8 +16,6 @@ add_executable(demo src/demo.cpp)
 
 target_link_libraries(demo maze_movement ${Boost_LIBRARIES})
 
-add_executable(lib_test test/maze_movement_lib_test.cpp)
+enable_testing()
 
-target_include_directories(lib_test ${GTEST_INCLUDE_DIRS})
-
-target_link_libraries(lib_test maze-movement ${GTEST_LIBRARIES} pthread)
+add_subdirectory(test)
